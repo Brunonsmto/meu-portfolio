@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.M. Soluções Digitais | Criação de Sites</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* RESET */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0f172a; color: #e2e8f0; line-height: 1.6; }
+        
+        /* CORES */
+        :root {
+            --primary: #3b82f6; /* Azul Tech */
+            --dark: #1e293b;    /* Fundo Cartão */
+            --accent: #22c55e;  /* Verde WhatsApp */
+        }
+
+        /* HERO SECTION */
+        header {
+            text-align: center; padding: 80px 20px;
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+        }
+        .tagline { color: var(--primary); font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-size: 0.9rem; margin-bottom: 10px; display: block;}
+        h1 { font-size: 3rem; margin-bottom: 20px; color: white; }
+        p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 40px auto; color: #94a3b8; }
+        
+        .btn-main {
+            background-color: var(--primary); color: white; padding: 15px 30px; border-radius: 8px;
+            text-decoration: none; font-weight: bold; transition: 0.3s; display: inline-block;
+        }
+        .btn-main:hover { background-color: #2563eb; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3); }
+
+        /* PORTFÓLIO GRID */
+        .portfolio { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; margin-bottom: 50px; font-size: 2rem; }
+        
+        .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+        
+        .card {
+            background-color: var(--dark); border-radius: 15px; overflow: hidden; width: 350px;
+            border: 1px solid #334155; transition: 0.3s; position: relative;
+        }
+        .card:hover { transform: translateY(-10px); border-color: var(--primary); }
+        
+        .card-preview {
+            height: 200px; display: flex; align-items: center; justify-content: center;
+            background-color: #000; position: relative;
+        }
+        /* Overlay colorido para dar destaque */
+        .card-preview::after {
+            content: ''; position: absolute; top:0; left:0; width:100%; height:100%;
+            background: linear-gradient(to top, rgba(15, 23, 42, 1), transparent);
+        }
+        .card-preview i { font-size: 4rem; color: var(--primary); z-index: 2; }
+        
+        .card-body { padding: 25px; text-align: center; }
+        .card-body h3 { margin-bottom: 10px; color: white; }
+        .card-body p { color: #94a3b8; font-size: 0.9rem; margin-bottom: 20px; }
+        
+        .btn-view {
+            display: block; width: 100%; padding: 12px; border: 1px solid var(--primary);
+            color: var(--primary); text-decoration: none; border-radius: 5px; font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn-view:hover { background-color: var(--primary); color: white; }
+
+        /* PLANOS */
+        .plans { background-color: var(--dark); padding: 60px 20px; text-align: center; margin-top: 50px; }
+        .price-box { 
+            border: 2px solid var(--primary); padding: 30px; border-radius: 15px; 
+            max-width: 400px; margin: 0 auto; background: rgba(59, 130, 246, 0.05);
+        }
+        .price { font-size: 2.5rem; font-weight: bold; color: white; margin: 20px 0; }
+        .price span { font-size: 1rem; color: #94a3b8; font-weight: normal; }
+
+        /* FOOTER */
+        footer { text-align: center; padding: 40px; color: #64748b; font-size: 0.9rem; }
+
+        /* RESPONSIVO */
+        @media (max-width: 600px) { h1 { font-size: 2.2rem; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <span class="tagline">B.M. Soluções Digitais</span>
+        <h1>Seu Negócio Precisa Estar no Google</h1>
+        <p>Desenvolvemos sites profissionais de alta performance com planos de assinatura acessíveis para empresas locais.</p>
+        <a href="#portfolio" class="btn-main">Ver Modelos Prontos</a>
+    </header>
+
+    <section id="portfolio" class="portfolio">
+        <h2 class="section-title">Confira Nosso Trabalho</h2>
+        
+        <div class="grid">
+            
+            <div class="card">
+                <div class="card-preview" style="background: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=60'); background-size: cover;">
+                    <i class="fas fa-pizza-slice" style="text-shadow: 0 4px 8px black;"></i>
+                </div>
+                <div class="card-body">
+                    <h3>Gastronomia & Delivery</h3>
+                    <p>Ideal para Pizzarias, Hamburguerias e Restaurantes. Foco em cardápio visual e pedidos rápidos.</p>
+                    <a href="https://brunonsmto.github.io/pizzaria-modelo/" target="_blank" class="btn-view">Ver Site Ao Vivo</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-preview" style="background: url('https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=500&q=60'); background-size: cover;">
+                    <i class="fas fa-wrench" style="text-shadow: 0 4px 8px black;"></i>
+                </div>
+                <div class="card-body">
+                    <h3>Serviços Automotivos</h3>
+                    <p>Para Oficinas, Auto Centers e Estética Automotiva. Transmite confiança técnica e seriedade.</p>
+                    <a href="https://brunonsmto.github.io/mecanica-modelo/" target="_blank" class="btn-view">Ver Site Ao Vivo</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-preview" style="background: url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=500&q=60'); background-size: cover;">
+                    <i class="fas fa-tooth" style="text-shadow: 0 4px 8px black;"></i>
+                </div>
+                <div class="card-body">
+                    <h3>Saúde & Estética</h3>
+                    <p>Design clean e sofisticado para Dentistas, Clínicas Médicas e Psicólogos. Foco em agendamento.</p>
+                    <a href="https://brunonsmto.github.io/dentista-modelo/" target="_blank" class="btn-view">Ver Site Ao Vivo</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="plans">
+        <h2 class="section-title">Como Funciona?</h2>
+        <div class="price-box">
+            <h3>Site por Assinatura</h3>
+            <div class="price">R$ 150 <span style="font-size: 1rem">/mês</span></div>
+            <p style="color: #94a3b8; margin-bottom: 20px;">+ Taxa única de instalação de R$ 200</p>
+            <ul style="text-align: left; margin-bottom: 30px; list-style: none; color: #cbd5e1;">
+                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--accent); margin-right: 10px;"></i> Site Profissional Completo</li>
+                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--accent); margin-right: 10px;"></i> Hospedagem Inclusa</li>
+                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--accent); margin-right: 10px;"></i> Manutenção Mensal</li>
+                <li><i class="fas fa-check" style="color: var(--accent); margin-right: 10px;"></i> Suporte via WhatsApp</li>
+            </ul>
+            
+            <a href="https://wa.me/5551981064914?text=Ol%C3%A1%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20sites." class="btn-main" style="width: 100%; background-color: var(--accent);">
+                <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 B.M. Soluções Digitais - Canoas/RS<br>Bruno Marques</p>
+    </footer>
+
+</body>
+</html>
